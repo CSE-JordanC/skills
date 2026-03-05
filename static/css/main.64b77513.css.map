@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.64b77513.css","mappings":"AAAA,KAEE,kBAA8B,CAC9B,aAAkB,CAFlB,sCAGF","sources":["index.css"],"sourcesContent":["body {\n  font-family: Arial, Helvetica, sans-serif;\n  background: rgb(166, 166, 228);\n  color:darkslateblue\n}\n"],"names":[],"sourceRoot":""}
