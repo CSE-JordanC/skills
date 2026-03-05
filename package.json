@@ -1,5 +1,5 @@
 {
-  "homepage": "/skills",
+  "homepage": "https://cse-jordanc.github.io/skills",
   "name": "skills",
   "version": "0.1.0",
   "private": false,
@@ -23,6 +23,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
