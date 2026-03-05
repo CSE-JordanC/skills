@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/housing-frontend-spring2026/static/css/main.64b77513.css",
-    "main.js": "/housing-frontend-spring2026/static/js/main.a4dfd61d.js",
-    "index.html": "/housing-frontend-spring2026/index.html",
-    "main.64b77513.css.map": "/housing-frontend-spring2026/static/css/main.64b77513.css.map",
-    "main.a4dfd61d.js.map": "/housing-frontend-spring2026/static/js/main.a4dfd61d.js.map"
+    "main.css": "/skills/static/css/main.64b77513.css",
+    "main.js": "/skills/static/js/main.a4dfd61d.js",
+    "index.html": "/skills/index.html",
+    "main.64b77513.css.map": "/skills/static/css/main.64b77513.css.map",
+    "main.a4dfd61d.js.map": "/skills/static/js/main.a4dfd61d.js.map"
   },
   "entrypoints": [
     "static/css/main.64b77513.css",
