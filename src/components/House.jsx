@@ -5,7 +5,7 @@ const House = (props) => {
     return (
         <section className="house">
             <h3>{props.title}</h3>
-            <img src={housePic} />
+            <img src={`https://demo-backend-0ji8.onrender.com/images/${props.img_name}`} />
         </section>
     )
 };
