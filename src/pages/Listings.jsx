@@ -15,11 +15,18 @@ const Listings = () => {
         setShowAddDialog(false);
     };
 
+    const addHouseToList = (house) => {
+        //adds the new house to the list of houses
+        setHouses((houses)=>[...houses,house]);
+    };
+
     //after the page has loaded
     useEffect(()=>{
         const loadHouses = async() => {
-            const response = await axios.get("https://demo-backend-0ji8.onrender.com/api/houses");
-            setHouses(response.data);
+            const localLink = "http://localhost:3001/api/houses";
+            const renderLink = "https://demo-backend-0ji8.onrender.com/api/houses";
+            const response = await axios.get(localLink);
+            setHouses(response.data);   
         };
 
         loadHouses();
@@ -31,19 +38,19 @@ const Listings = () => {
             <button id="btn-add-house" onClick={openAddDialog}>+</button>
             {showAddDialog?(<AddHouse 
                                 closeAddDialog={closeAddDialog}
+                                addHouseToList={addHouseToList}
                                     />):("")}
-            
+                                    
             <div id="houses" className="columns">
                 {houses.map((house)=>(
                     <House 
-                        key={house._id}
                         _id={house._id}
-                        name={house.name} 
-                        size={house.size}
-                        bedrooms={house.bedrooms}
-                        bathrooms={house.bathrooms}
-                        main_image={house.main_image}
-                        features={house.features} />
+                            name={house.name} 
+                            size={house.size}
+                            bedrooms={house.bedrooms}
+                            bathrooms={house.bathrooms}
+                            main_image={house.main_image}
+                            features={house.features} />
                 ))}
             </div>
         </main>

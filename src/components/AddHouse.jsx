@@ -3,15 +3,34 @@ import {useState} from "react";
 
 const AddHouse = (props) => {
     const [result, setResult] = useState("");
+    const [prevSrc, setPrevSrc] = useState("");
 
-    const addHouseToServer = (e) => {
+    const uploadImage = (e) => {
+        setPrevSrc(URL.createObjectURL(e.target.files[0]));
+    };
+
+    const addHouseToServer = async(e) => {
         e.preventDefault();
         setResult("Sending...");
 
         const formData = new FormData(e.target);
         console.log(...formData);
 
-        setResult("Sent");
+        const postURLLocal = "http://localhost:3001/api/houses";
+        const postURLRender = "https://demo-backend-0ji8.onrender.com/api.houses";
+        const response = await fetch(postURLLocal, {
+            "method": "POST",
+            "body":formData
+        });
+
+
+        if(response.status ==200){
+            setResult("House Added");
+            props.closeAddDialog();
+            props.addHouseToList(await response.json());
+        }else {
+            setResult("Error adding house");
+        }
     };
 
     return (
@@ -53,6 +72,18 @@ const AddHouse = (props) => {
                                 <label htmlFor="features">Features:</label>
                                 <textarea type="text" id="features" name="features"></textarea>
                             </p>
+
+                            <section>
+                                <p id="img-prev-section">
+                                    {prevSrc==""?(""):(
+                                        <img id="img-prev" src={prevSrc} />
+                                    )}
+                                </p>
+                                <p>
+                                    <label htmlFor="img">Select Image</label>
+                                    <input type="file" id="img" accept="images/*" onChange={uploadImage}></input>
+                                </p>
+                            </section>
 
                             <p>
                                 <button type="submit">Submit</button>
