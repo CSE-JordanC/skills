@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/skills/static/css/main.64b77513.css",
-    "main.js": "/skills/static/js/main.dcd5c921.js",
+    "main.css": "/skills/static/css/main.44c553d7.css",
+    "main.js": "/skills/static/js/main.72b87124.js",
+    "static/media/modern-farmhouse.jpg": "/skills/static/media/modern-farmhouse.cb4417a542389dfdcb14.jpg",
+    "static/media/country-house.jpg": "/skills/static/media/country-house.067ec277f060ff669ef0.jpg",
+    "static/media/large-driveway.jpg": "/skills/static/media/large-driveway.6f794cfd5161906f8d4a.jpg",
+    "static/media/logo.jpg": "/skills/static/media/logo.f8643c9099776fed4f62.jpg",
     "index.html": "/skills/index.html",
-    "main.64b77513.css.map": "/skills/static/css/main.64b77513.css.map",
-    "main.dcd5c921.js.map": "/skills/static/js/main.dcd5c921.js.map"
+    "main.44c553d7.css.map": "/skills/static/css/main.44c553d7.css.map",
+    "main.72b87124.js.map": "/skills/static/js/main.72b87124.js.map"
   },
   "entrypoints": [
-    "static/css/main.64b77513.css",
-    "static/js/main.dcd5c921.js"
+    "static/css/main.44c553d7.css",
+    "static/js/main.72b87124.js"
   ]
 }
