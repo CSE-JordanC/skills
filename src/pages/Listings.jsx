@@ -14,7 +14,7 @@ const Listings = () => {
     const closeAddDialog = () => {
         setShowAddDialog(false);
     };
-
+    
     const addHouseToList = (house) => {
         //adds the new house to the list of houses
         setHouses((houses)=>[...houses,house]);
@@ -24,7 +24,7 @@ const Listings = () => {
     useEffect(()=>{
         const loadHouses = async() => {
             const localLink = "http://localhost:3001/api/houses";
-            const renderLink = "https://demo-backend-0ji8.onrender.com/api/houses";
+            const renderLink = "https://spring-housing-backend.onrender.com/api/houses";
             const response = await axios.get(localLink);
             setHouses(response.data);   
         };
@@ -40,11 +40,12 @@ const Listings = () => {
                                 closeAddDialog={closeAddDialog}
                                 addHouseToList={addHouseToList}
                                     />):("")}
-                                    
+
             <div id="houses" className="columns">
                 {houses.map((house)=>(
                     <House 
-                        _id={house._id}
+                            key={house._id}
+                            _id={house._id}
                             name={house.name} 
                             size={house.size}
                             bedrooms={house.bedrooms}

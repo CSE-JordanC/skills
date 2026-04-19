@@ -17,12 +17,11 @@ const AddHouse = (props) => {
         console.log(...formData);
 
         const postURLLocal = "http://localhost:3001/api/houses";
-        const postURLRender = "https://demo-backend-0ji8.onrender.com/api.houses";
+        const postURLREnder = "https://spring-housing-backend.onrender.com/api/houses";
         const response = await fetch(postURLLocal, {
-            "method": "POST",
+            "method":"POST",
             "body":formData
         });
-
 
         if(response.status ==200){
             setResult("House Added");
